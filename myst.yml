@@ -3,19 +3,30 @@ version: 1
 project:
   id: 0e17dcd0-a8d7-46cb-b75c-fa3129a3e551
   title: Audio Signal Processing with Python
-  description: A Jupyter Book for Audio Signal Processing with Python
-  keywords: [audio, signal, processing, python, jupyter, book]
   authors:
     - name: Francesco Papaleo
   license: CC-BY-4.0
   open_access: true
   github: https://github.com/francescopapaleo/audio-signal-processing-notebook
   
+  plugins:
+    - directives.mjs
+    - picsum.mjs
+    - latex.mjs
+    - error-rules.mjs
+    - versions.mjs
+    - templates.mjs
+    - type: executable
+      path: picsum.py
+    - type: executable
+      path: markup.py
+    - type: javascript
+      path: markup.mjs
+
   toc:
-    - file: intro.md
+    - file: index.md
     - title: Fundamentals Of Sound
       children:
-        - file: content/01_fundamentals_of_sound/00_fundamentals_of_sound.md
         - file: content/01_fundamentals_of_sound/01_sound_waves.ipynb
         - file: content/01_fundamentals_of_sound/02_amplitude_power_dB.ipynb
     - title: Digital Audio
@@ -58,12 +69,7 @@ project:
     
     
 site:
-  template: book-theme
   title: Audio Signal Processing with Python
   options:
     theme: light
-    style: styles.css
-    outline_maxdepth: 6
-  parts:
-    header: header.md
-    footer: footer.md
+    style: public/style.css
