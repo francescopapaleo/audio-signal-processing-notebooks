@@ -2,33 +2,46 @@
 version: 1
 project:
   id: 0e17dcd0-a8d7-46cb-b75c-fa3129a3e551
-  title: Audio Signal Processing with Python
+  title: Audio Signal Processing Notebooks
+  github: francescopapaleo/audio-signal-processing-notebook
+  jupyter: true
   authors:
     - name: Francesco Papaleo
   license: CC-BY-4.0
-  open_access: true
-  github: https://github.com/francescopapaleo/audio-signal-processing-notebook
-  
+  subject: Audio Signal Processing
+  references:
+    python: https://docs.python.org/3.13/
+    jupyterbook: https://jupyterbook.org/en/stable/
+    jtex: https://mystmd.org/jtex/
+    spec: https://mystmd.org/spec/
+    biapol: https://biapol.github.io/blog/
   plugins:
-    - directives.mjs
-    - picsum.mjs
-    - latex.mjs
-    - error-rules.mjs
-    - versions.mjs
-    - templates.mjs
-    - type: executable
-      path: picsum.py
-    - type: executable
-      path: markup.py
-    - type: javascript
-      path: markup.mjs
-
+    - plugins/directives.mjs
+    - plugins/picsum.mjs
+    - plugins/latex.mjs
+    - plugins/error-rules.mjs
+    - plugins/versions.mjs
+    - plugins/templates.mjs
+    - plugins/markup.mjs
+    
+  error_rules:
+    - rule: link-resolves
+      severity: ignore
+      keys:
+        - /robots.txt
+        - /sitemap.xml
+        - /jtex/template-yml
+        - /jtex
+        - /jtex/create-a-latex-template
+        - /jtex/create-a-beamer-template
+        - /jtex/contribute-a-template
   toc:
     - file: index.md
     - title: Fundamentals Of Sound
       children:
         - file: content/01_fundamentals_of_sound/01_sound_waves.ipynb
-        - file: content/01_fundamentals_of_sound/02_amplitude_power_dB.ipynb
+        - file: content/01_fundamentals_of_sound/02_phase.ipynb
+        - file: content/01_fundamentals_of_sound/03_amplitude_power_dB.ipynb
     - title: Digital Audio
       children:
         - file: content/02_digital_audio/00_digital_audio_fundamentals.md
@@ -67,9 +80,17 @@ project:
         - file: content/07_reverberation/24_spring_reverb.ipynb
         - file: content/07_reverberation/26_feedback_delay_network.ipynb
     
-    
 site:
-  title: Audio Signal Processing with Python
+  template: book-theme
+  title: Audio Signal Processing Notebooks
+  nav: 
+    - file: index.md
   options:
     theme: light
-    style: public/style.css
+    style: css/style.css
+  parts:
+    footer: footer.md
+
+sphinx:
+  config:
+    nb_execution_show_input: false
