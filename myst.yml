@@ -17,13 +17,12 @@ project:
     biapol: https://biapol.github.io/blog/
   plugins:
     - plugins/directives.mjs
-    - plugins/picsum.mjs
-    - plugins/latex.mjs
     - plugins/error-rules.mjs
-    - plugins/versions.mjs
-    - plugins/templates.mjs
+    - plugins/latex.mjs
     - plugins/markup.mjs
-    
+    - plugins/picsum.mjs
+    - plugins/templates.mjs
+    - plugins/versions.mjs
   error_rules:
     - rule: link-resolves
       severity: ignore
@@ -39,46 +38,46 @@ project:
     - file: index.md
     - title: Fundamentals Of Sound
       children:
-        - file: content/01_fundamentals_of_sound/01_sound_waves.ipynb
-        - file: content/01_fundamentals_of_sound/02_phase.ipynb
-        - file: content/01_fundamentals_of_sound/03_amplitude_power_dB.ipynb
+        - file: docs/01_fundamentals_of_sound/01_sound_waves.ipynb
+        - file: docs/01_fundamentals_of_sound/02_phase.ipynb
+        - file: docs/01_fundamentals_of_sound/03_amplitude_power_dB.ipynb
     - title: Digital Audio
       children:
-        - file: content/02_digital_audio/00_digital_audio_fundamentals.md
-        - file: content/02_digital_audio/01_sampling.ipynb
-        - file: content/02_digital_audio/02_quantization.ipynb
-        - file: content/02_digital_audio/03_waveforms.ipynb
-        - file: content/02_digital_audio/04_normalization_dc_rms.ipynb
-        - file: content/02_digital_audio/loudness.ipynb
-        - file: content/02_digital_audio/sound_music_descriptors.ipynb
-        - file: content/02_digital_audio/working_with_audio_files.ipynb
+        - file: docs/02_digital_audio/00_digital_audio_fundamentals.md
+        - file: docs/02_digital_audio/01_sampling.ipynb
+        - file: docs/02_digital_audio/02_quantization.ipynb
+        - file: docs/02_digital_audio/03_waveforms.ipynb
+        - file: docs/02_digital_audio/04_normalization_dc_rms.ipynb
+        - file: docs/02_digital_audio/loudness.ipynb
+        - file: docs/02_digital_audio/sound_music_descriptors.ipynb
+        - file: docs/02_digital_audio/working_with_audio_files.ipynb
     - title: Mathematics
       children:
-        - file: content/03_mathematics/13_complex_numbers.ipynb
-        - file: content/03_mathematics/14_linear_algebra_basics.ipynb
-        - file: content/03_mathematics/15_linear_and_non-linear_systems.ipynb
+        - file: docs/03_mathematics/13_complex_numbers.ipynb
+        - file: docs/03_mathematics/14_linear_algebra_basics.ipynb
+        - file: docs/03_mathematics/15_linear_and_non-linear_systems.ipynb
     - title: Time Analysis
       children:
-        - file: content/04_time_analysis/10_plot_audio.ipynb
-        - file: content/04_time_analysis/11_plot_difference.ipynb
-        - file: content/04_time_analysis/12_time_domain_analysis.ipynb
+        - file: docs/04_time_analysis/10_plot_audio.ipynb
+        - file: docs/04_time_analysis/11_plot_difference.ipynb
+        - file: docs/04_time_analysis/12_time_domain_analysis.ipynb
     - title: Frequency Domain
       children:
-        - file: content/05_frequency_domain/16_fourier_transform.ipynb
-        - file: content/05_frequency_domain/17_filters.ipynb
+        - file: docs/05_frequency_domain/16_fourier_transform.ipynb
+        - file: docs/05_frequency_domain/17_filters.ipynb
     - title: Convolution
       children:
-        - file: content/06_convolution/18_convolution.ipynb
-        - file: content/06_convolution/19_impulse_response.ipynb
-        - file: content/06_convolution/20_plot_ir_waterfall.ipynb
-        - file: content/06_convolution/21_plot_ir_zoom.ipynb
-        - file: content/06_convolution/25_sweep_tone_analysis.ipynb
+        - file: docs/06_convolution/18_convolution.ipynb
+        - file: docs/06_convolution/19_impulse_response.ipynb
+        - file: docs/06_convolution/20_plot_ir_waterfall.ipynb
+        - file: docs/06_convolution/21_plot_ir_zoom.ipynb
+        - file: docs/06_convolution/25_sweep_tone_analysis.ipynb
     - title: Reverberation
       children:
-        - file: content/07_reverberation/22_reverberation.ipynb
-        - file: content/07_reverberation/23_convolution_reverb.ipynb
-        - file: content/07_reverberation/24_spring_reverb.ipynb
-        - file: content/07_reverberation/26_feedback_delay_network.ipynb
+        - file: docs/07_reverberation/22_reverberation.ipynb
+        - file: docs/07_reverberation/23_convolution_reverb.ipynb
+        - file: docs/07_reverberation/24_spring_reverb.ipynb
+        - file: docs/07_reverberation/26_feedback_delay_network.ipynb
     
 site:
   template: book-theme
@@ -90,7 +89,3 @@ site:
     style: css/style.css
   parts:
     footer: footer.md
-
-sphinx:
-  config:
-    nb_execution_show_input: false
