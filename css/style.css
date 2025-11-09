@@ -1,5 +1,49 @@
-.text-gradient em {
-  background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* 1) Choose a light font stack. Inter and Roboto are good defaults. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+/* Fallbacks will be used if Inter isn’t available offline */
+
+/* 2) Set global font family via CSS custom properties used by myst-theme */
+:root {
+  --myst-font-sans: "Inter", "Roboto", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+
+  /* Optional: tune sizes/line-height slightly for a lighter feel */
+  --myst-font-size-base: 14px;
+  --myst-line-height: 1.6;
+}
+
+/* 3) Apply lighter font-weight defaults */
+body,
+.myst-content {
+  font-family: var(--myst-font-sans);
+  font-weight: 300; /* Light */
+}
+
+/* 4) Headings: lighter than default but with hierarchy retained */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--myst-font-sans);
+  font-weight: 400; /* Regular for headings */
+}
+
+/* 5) Sidebar, nav, and footer to match */
+.sidebar,
+.header,
+.footer,
+.toc,
+.navbar {
+  font-family: var(--myst-font-sans);
+  font-weight: 300;
+}
+
+/* 6) Code blocks keep monospace, but you can slightly reduce weight */
+pre,
+code,
+.katex {
+  font-weight: 400; /* keep readable */
 }

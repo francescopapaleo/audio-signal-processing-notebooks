@@ -3,7 +3,7 @@ version: 1
 project:
   id: 0e17dcd0-a8d7-46cb-b75c-fa3129a3e551
   title: Audio Signal Processing Notebooks
-  github: francescopapaleo/audio-signal-processing-notebook
+  github: francescopapaleo/audio-signal-processing-notebooks
   jupyter: true
   authors:
     - name: Francesco Papaleo
@@ -16,13 +16,13 @@ project:
     spec: https://mystmd.org/spec/
     biapol: https://biapol.github.io/blog/
   plugins:
-    - plugins/directives.mjs
-    - plugins/error-rules.mjs
-    - plugins/latex.mjs
+    # - plugins/directives.mjs
+    # - plugins/error-rules.mjs
+    # - plugins/latex.mjs
     - plugins/markup.mjs
     - plugins/picsum.mjs
-    - plugins/templates.mjs
-    - plugins/versions.mjs
+    # - plugins/templates.mjs
+    # - plugins/versions.mjs
   error_rules:
     - rule: link-resolves
       severity: ignore
@@ -82,10 +82,10 @@ project:
 site:
   template: book-theme
   title: Audio Signal Processing Notebooks
-  nav: 
-    - file: index.md
   options:
     theme: light
     style: css/style.css
+    logo: assets/logo.png
+    favicon: assets/favicon.ico
   parts:
     footer: footer.md
