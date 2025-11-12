@@ -9,6 +9,7 @@ project:
     - name: Francesco Papaleo
   license: CC-BY-4.0
   subject: Audio Signal Processing
+  bibliography: references.bib
   references:
     python: https://docs.python.org/3.13/
     jupyterbook: https://jupyterbook.org/en/stable/
@@ -78,6 +79,7 @@ project:
         - file: docs/07_reverberation/23_convolution_reverb.ipynb
         - file: docs/07_reverberation/24_spring_reverb.ipynb
         - file: docs/07_reverberation/26_feedback_delay_network.ipynb
+    - file: references.md
     
 site:
   template: book-theme

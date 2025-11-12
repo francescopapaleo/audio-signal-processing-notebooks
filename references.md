@@ -1,3 +1,7 @@
-# References
+---
+title: References
+bibliography:
+    - references.bib
+---
 
-```{bibliography}
+

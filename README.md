@@ -124,3 +124,18 @@ To avoid unnecessary Git commits, add _build/ to .gitignore:
     git commit -m "Ignore _build/ folder"
     
     git push origin main
+
+
+:::{hint}
+
+**Want to interact with the audio widget in your browser?**
+
+You can launch this notebook on [Binder](https://mybinder.org/) to play with the phase shift slider and listen to the audio output live, right in your web browser.
+
+**How to do it:**
+1. Click the "Rocket" or "Binder" badge at the top of this notebook (or visit [mybinder.org](https://mybinder.org/)).
+2. Paste the GitHub repository URL for this project into Binder, or use any provided launch link.
+3. Once the environment loads, navigate to this notebook file.
+4. Move the "Phase shift" slider to change the phase difference between the two waves and press the play button to listen.
+
+:::
